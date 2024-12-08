@@ -61,6 +61,10 @@
 
                     const goButton = document.querySelector('.GO-Button');
                     const homeContent = document.querySelector('.home-content');
+                    const skill = document.querySelector('.skill')
+                    const project = document.querySelector('.project')
+                    const education = document.querySelector('.education')
+                    const contact = document.querySelector('.contact')
 
                     goButton.addEventListener('click', () => {
                         homeContent.scrollIntoView({ behavior: 'smooth' });
@@ -108,6 +112,30 @@
                     if (introductionBtn) {
                         introductionBtn.addEventListener('click', () => {
                             homeContent.scrollIntoView({ behavior: 'smooth' });
+                        })
+                    }
+
+                    if (skillBtn) {
+                        skillBtn.addEventListener('click', () => {
+                            skill.scrollIntoView({ behavior: 'smooth' });
+                        })
+                    }
+
+                    if (projectBtn) {
+                        projectBtn.addEventListener('click', () => {
+                            project.scrollIntoView({ behavior: 'smooth' });
+                        })
+                    }
+
+                    if (educationBtn) {
+                        educationBtn.addEventListener('click', () => {
+                            education.scrollIntoView({ behavior: 'smooth' });
+                        })
+                    }
+
+                    if (contactBtn) {
+                        contactBtn.addEventListener('click', () => {
+                            contact.scrollIntoView({ behavior: 'smooth' });
                         })
                     }
                 });

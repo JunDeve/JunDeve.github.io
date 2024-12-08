@@ -153,20 +153,6 @@ nav {
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
 }
 
-/* .wise-saying {
-    font-family: 'Times New Roman', serif;
-    color: rgb(0, 0, 0);
-    padding: 15px;
-    background-color: #ffdada;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    font-size: 22px;
-    line-height: 1.5;
-    margin-top: 135px;
-    margin-left: 15px;
-    margin-right: 15px;
-} */
-
 .home-content {
     margin-top: 220px;
     margin-left: 50px;
@@ -178,8 +164,9 @@ nav {
     justify-content: center;
     gap: 30px;
 }
+
 .introduction-intro {
-    background-color: gray;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .profile-section {
@@ -204,4 +191,129 @@ nav {
 
 .profile-value {
     margin-top: 5px;
+}
+
+.tech-stack {
+    padding: 20px;
+}
+
+.skill {
+    margin-top: 220px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.category {
+    margin-bottom: 20px;
+}
+
+.category h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.category li {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.category li:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    ;
+}
+
+.skill-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill-list li {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    width: calc(20% - 15px);
+    text-align: center;
+    font-size: 14px;
+}
+
+.education {
+    margin-top: 220px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.note {
+    background-color: #222;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.note p {
+    text-align: left;
+    text-underline-offset: 3px;
+}
+
+.awards {
+    background-color: #222;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.awards p {
+    text-align: left;
+    text-underline-offset: 3px;
+}
+
+.qualifications {
+    background-color: #222;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.qualifications p {
+    text-align: left;
+    text-underline-offset: 3px;
+}
+
+.contact {
+    margin-top: 220px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.contact-info a {
+    color: gray;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-info p {
+    color: gray;
+    text-decoration: none;
+}
+
+.contact ul {
+    list-style: none;
+    margin-left: 18.5%;
+}
+
+.contact li {
+    display: inline-block;
+    margin: 0 20px;
 }
