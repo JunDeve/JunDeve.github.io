@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JunDeve</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main-title">
+        <h1>JunDeve</h1>
+    </div>
+    <div class="background-overlay">
+        <div class="intro">
+            <div class="title">
+                <h1>JunDeve</h1>
+            </div>
+            <p class="greeting">
+                <span class="animated-text">Hello! Thank you for visiting my portfolio.</span><br>
+                <span class="animated-text">안녕하세요! 저의 포트폴리오에 방문해주셔서 감사합니다.</span>
+            </p>
+        </div>
+        <div class="main-content" id="main-content" style="display: none;">
+            <!-- 여기에 메인불러옴 -->
+        </div>
+        <footer class="click-footer">
+            <a href="#" class="learn-more">LEARN MORE CLICK! (클릭!)"</a>
+        </footer>
+    </div>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const learnMoreButton = document.querySelector('.learn-more');
+        const intro = document.querySelector('.intro');
+        const backgroundOverlay = document.querySelector('.background-overlay');
+        const clickfooter = document.querySelector('.click-footer');
+        const maintitle = document.querySelector('.main-title');
+
+        learnMoreButton.addEventListener('click', () => {
+            intro.style.opacity = 0;
+            clickfooter.style.opacity = 0;
+            backgroundOverlay.style.height = '100%';
+            backgroundOverlay.style.backgroundColor = '#333';
+            backgroundOverlay.style.marginTop = '80px';
+            maintitle.style.opacity = 1;
+
+            fetch('JunDeveMain.html')
+                .then(response => response.text())
+                .then(data => {
+                    const mainContent = document.getElementById('main-content');
+                    mainContent.innerHTML = data;
+                    const navButton = document.querySelector('.nav-button');
+                    navButton.classList.add('animate');
+                    mainContent.style.display = 'block';
+
+                    const contentBox = document.querySelector('.content-box');
+
+                    setTimeout(() => {
+                        contentBox.style.opacity = 1;
+                    }, 1000);
+
+                    const goButton = document.querySelector('.GO-Button');
+                    const homeContent = document.querySelector('.home-content');
+                    const skill = document.querySelector('.skill')
+                    const project = document.querySelector('.project')
+                    const education = document.querySelector('.education')
+                    const contact = document.querySelector('.contact')
+
+                    goButton.addEventListener('click', () => {
+                        homeContent.scrollIntoView({ behavior: 'smooth' });
+                    });
+
+                    const homeBtn = mainContent.querySelector('.home-btn');
+                    const introductionBtn = mainContent.querySelector('.introduction-btn');
+                    const skillBtn = mainContent.querySelector('.skill-btn');
+                    const projectBtn = mainContent.querySelector('.project-btn');
+                    const educationBtn = mainContent.querySelector('.education-btn');
+                    const contactBtn = mainContent.querySelector('.contact-btn');
+
+                    // 아 반대로 했네.. 다음에는 Main 만들고 불러오자
+                    if (homeBtn) {
+                        homeBtn.addEventListener('click', () => {
+                            const alertDiv = document.createElement('div');
+                            alertDiv.classList.add('alert');
+                            alertDiv.style.position = 'fixed';
+                            alertDiv.style.top = '50%';
+                            alertDiv.style.left = '50%';
+                            alertDiv.style.transform = 'translate(-50%, -50%)';
+                            or = '#fff';
+                            alertDiv.style.backgroundColor = '#222';
+                            alertDiv.style.padding = '20px';
+                            alertDiv.style.borderRadius = '5px';
+                            alertDiv.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.2)';
+                            document.body.appendChild(alertDiv);
+                            alertDiv.textContent = '홈으로 이동합니다 3...';
+
+                            let count = 2;
+                            const countdown = setInterval(() => {
+                                alertDiv.textContent = `홈으로 이동합니다 ${count}...`;
+                                count--;
+
+                                if (count === 0) {
+                                    setTimeout(() => {
+                                        clearInterval(countdown);
+                                        location.reload();
+                                    }, 1000);
+                                }
+                            }, 1000);
+                        });
+                    }
+
+                    if (introductionBtn) {
+                        introductionBtn.addEventListener('click', () => {
+                            homeContent.scrollIntoView({ behavior: 'smooth' });
+                        })
+                    }
+
+                    if (skillBtn) {
+                        skillBtn.addEventListener('click', () => {
+                            skill.scrollIntoView({ behavior: 'smooth' });
+                        })
+                    }
+
+                    if (projectBtn) {
+                        projectBtn.addEventListener('click', () => {
+                            project.scrollIntoView({ behavior: 'smooth' });
+                        })
+                    }
+
+                    if (educationBtn) {
+                        educationBtn.addEventListener('click', () => {
+                            education.scrollIntoView({ behavior: 'smooth' });
+                        })
+                    }
+
+                    if (contactBtn) {
+                        contactBtn.addEventListener('click', () => {
+                            contact.scrollIntoView({ behavior: 'smooth' });
+                        })
+                    }
+                });
+        });
+    });
+</script>
+
+</html>
