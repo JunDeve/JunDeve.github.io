@@ -1,1 +1,0 @@
-Static site portfolio - JunDeve
