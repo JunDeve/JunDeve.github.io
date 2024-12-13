@@ -57,6 +57,12 @@ nav {
     min-width: 800px;
 }
 
+@media (max-width: 800px) {
+    :root {
+        --scale: 0.6;
+    }
+}
+
 .content {
     background-color: black;
     height: 100%;
@@ -336,8 +342,8 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 6px;
-    margin-left: 6px;
+    margin-right: 12px;
+    width: 300px;
 }
 
 .box-A {
@@ -366,8 +372,8 @@ nav {
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 10px;
-    height: 125px;
-    width: 125px;
+    height: 170px;
+    width: 270px;
     text-align: center;
     display: flex;
     justify-content: center;
