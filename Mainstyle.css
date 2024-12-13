@@ -154,7 +154,7 @@ nav {
 }
 
 .home-content {
-    margin-top: 220px;
+    margin-top: 320px;
     margin-left: 50px;
     margin-right: 50px;
 }
@@ -198,7 +198,7 @@ nav {
 }
 
 .skill {
-    margin-top: 220px;
+    margin-top: 320px;
     margin-left: 50px;
     margin-right: 50px;
 }
@@ -238,17 +238,18 @@ nav {
 }
 
 .skill-list li {
+    flex: 1 0 20%;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
     padding: 10px;
     margin: 5px;
     width: calc(20% - 15px);
     text-align: center;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .education {
-    margin-top: 220px;
+    margin-top: 320px;
     margin-left: 50px;
     margin-right: 50px;
 }
@@ -290,7 +291,7 @@ nav {
 }
 
 .contact {
-    margin-top: 220px;
+    margin-top: 320px;
     margin-left: 50px;
     margin-right: 50px;
 }
@@ -316,4 +317,98 @@ nav {
 .contact li {
     display: inline-block;
     margin: 0 20px;
+}
+
+.project {
+    margin-top: 320px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.project-op {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    justify-content: center;
+}
+
+.project-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 6px;
+    margin-left: 6px;
+}
+
+.box-A {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.box-B {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.box-C {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.box-D {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 10px;
+    height: 125px;
+    width: 125px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-A:hover {
+    background-color: #ff9f9fd2;
+    cursor: pointer;
+}
+
+.box-B:hover {
+    background-color: #ffed9fd2;
+    cursor: pointer;
+}
+
+.box-C:hover {
+    background-color: #b2ff9fd2;
+    cursor: pointer;
+}
+
+.box-D:hover {
+    background-color: #9fd1ffd2;
+    cursor: pointer;
+}
+
+.project-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    margin-bottom: 10px;
+}
+
+.project-tech {
+    margin-bottom: 10px;
+}
+
+.project-link {
+    color: #007bff;
+    text-decoration: none;
 }
