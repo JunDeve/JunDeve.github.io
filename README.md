@@ -1,3 +1,0 @@
-# JunDeve.github.io :)
-
-Hello...
