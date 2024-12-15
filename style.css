@@ -48,6 +48,23 @@ footer {
     transition: marginTop 0.5s ease-in-out;
 }
 
+.alert-message {
+
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .alert-message {
+      display: block;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 200px;
+      font-size: 20px;
+    }
+  }
+
 @keyframes moveUp {
     from {
         top: 50%;

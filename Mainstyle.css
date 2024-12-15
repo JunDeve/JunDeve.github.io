@@ -34,7 +34,6 @@ nav {
     box-shadow: 0 9px #999;
     left: 43%;
     right: 50%;
-    /* 반응형으로 바꿔야함 위치가 바뀜 */
 }
 
 .GO-Button:hover {
@@ -55,12 +54,6 @@ nav {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     position: relative;
     min-width: 800px;
-}
-
-@media (max-width: 800px) {
-    :root {
-        --scale: 0.6;
-    }
 }
 
 .content {
@@ -305,24 +298,19 @@ nav {
 .contact-info a {
     color: gray;
     text-decoration: none;
+}
+
+.contact-info table {
     display: flex;
     justify-content: center;
+    padding: 50px;
     align-items: center;
 }
 
-.contact-info p {
-    color: gray;
-    text-decoration: none;
-}
-
-.contact ul {
-    list-style: none;
-    margin-left: 18.5%;
-}
-
-.contact li {
-    display: inline-block;
-    margin: 0 20px;
+.contact-info table td{
+    text-align: center;
+    padding: 10px;
+    line-height: 1.5;
 }
 
 .project {
@@ -417,4 +405,20 @@ nav {
 .project-link {
     color: #007bff;
     text-decoration: none;
+}
+
+.fixed-nav {
+    position: fixed;
+    margin-top: 47%;
+    background: #88888885;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.fixed-nav a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.911);
 }
