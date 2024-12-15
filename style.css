@@ -49,19 +49,13 @@ footer {
 }
 
 .alert-message {
-    display: none;
+    display: none !important;
     text-align: center;
     justify-content: center;
     align-items: center;
     margin-top: 200px;
     font-size: 20px;
 }
-
-@media (max-width: 768px) {
-    .alert-message {
-      display: block;
-    }
-  }
 
 @keyframes moveUp {
     from {
