@@ -1,5 +1,5 @@
 body {
-    font-family: sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #333;
@@ -339,7 +339,7 @@ nav {
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 10px;
-    height: 150px;
+    height: 170px;
     width: 270px;
 }
 
@@ -348,7 +348,7 @@ nav {
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 10px;
-    height: 150px;
+    height: 170px;
     width: 270px;
 }
 
@@ -357,7 +357,7 @@ nav {
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 10px;
-    height: 150px;
+    height: 170px;
     width: 270px;
 }
 
@@ -366,7 +366,7 @@ nav {
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 10px;
-    height: 150px;
+    height: 170px;
     width: 270px;
     text-align: center;
     display: flex;
@@ -414,12 +414,15 @@ nav {
 }
 
 .fixed-nav {
-    position: fixed;
-    margin-top: 47%;
+    position: flex;
     background: #88888885;
     padding: 10px;
+    width: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    margin-left: 94%;
+    margin-top: -200px;
+    z-index: 2;
 }
 
 .fixed-nav a {

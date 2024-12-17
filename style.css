@@ -1,5 +1,5 @@
 body {
-    font-family: sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     background-color: #222;
     color: #fff;
     margin: 0;
@@ -48,14 +48,14 @@ footer {
     transition: marginTop 0.5s ease-in-out;
 }
 
-.alert-message {
-    display: none !important;
+/* .alert-message {
+    display: none;
     text-align: center;
     justify-content: center;
     align-items: center;
     margin-top: 200px;
     font-size: 20px;
-}
+} */
 
 @keyframes moveUp {
     from {
