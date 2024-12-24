@@ -42,6 +42,10 @@ nav {
     transform: translateY(4px);
 }
 
+.introduction-intro {
+    margin-left: 30px;
+}
+
 .content-box {
     opacity: 0;
     transition: opacity 2.5s ease-in-out;
@@ -164,9 +168,6 @@ nav {
     gap: 30px;
 }
 
-.introduction-intro {
-    background-color: rgba(255, 255, 255, 0.1);
-}
 
 .profile-section {
     display: flex;
