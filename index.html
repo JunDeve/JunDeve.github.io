@@ -21,6 +21,7 @@
             <p class="greeting">
                 <span class="animated-text">Hello! Thank you for visiting my portfolio.</span><br>
                 <span class="animated-text">안녕하세요! 저의 포트폴리오에 방문해주셔서 감사합니다.</span>
+                <span class="animated-text">화면이 잘리거나 글자가 작다면 가로모드를 이용해주십시오.</span>
             </p>
         </div>
         <div class="main-content" id="main-content" style="display: none;">
@@ -39,6 +40,17 @@
         const clickfooter = document.querySelector('.click-footer');
         const maintitle = document.querySelector('.main-title');
 
+        const adjustContentScale = () => {
+            const mainContent = document.getElementById('main-content');
+            if (window.innerWidth < 1024) {
+                mainContent.classList.add('is-scaled');
+            } else {
+                mainContent.classList.remove('is-scaled');
+            }
+        };
+
+        window.addEventListener('resize', adjustContentScale);
+
         learnMoreButton.addEventListener('click', () => {
             intro.style.opacity = 0;
             clickfooter.style.opacity = 0;
@@ -53,25 +65,33 @@
                     const mainContent = document.getElementById('main-content');
                     mainContent.innerHTML = data;
                     const navButton = document.querySelector('.nav-button');
-                    navButton.classList.add('animate');
+                    if (navButton) {
+                        navButton.classList.add('animate');
+                    }
                     mainContent.style.display = 'block';
 
                     const contentBox = document.querySelector('.content-box');
+                    if (contentBox) {
+                        setTimeout(() => {
+                            contentBox.style.opacity = 1;
+                        }, 1000);
+                    }
 
-                    setTimeout(() => {
-                        contentBox.style.opacity = 1;
-                    }, 1000);
-
+                    // 콘텐츠를 불러온 후에도 크기 조절 함수 실행
+                    adjustContentScale();
+                    
                     const goButton = document.querySelector('.GO-Button');
                     const homeContent = document.querySelector('.home-content');
-                    const skill = document.querySelector('.skill')
-                    const project = document.querySelector('.project')
-                    const education = document.querySelector('.education')
-                    const contact = document.querySelector('.contact')
+                    const skill = document.querySelector('.skill');
+                    const project = document.querySelector('.project');
+                    const education = document.querySelector('.education');
+                    const contact = document.querySelector('.contact');
 
-                    goButton.addEventListener('click', () => {
-                        homeContent.scrollIntoView({ behavior: 'smooth' });
-                    });
+                    if (goButton && homeContent) {
+                        goButton.addEventListener('click', () => {
+                            homeContent.scrollIntoView({ behavior: 'smooth' });
+                        });
+                    }
 
                     const homeBtn = mainContent.querySelector('.home-btn');
                     const introductionBtn = mainContent.querySelector('.introduction-btn');
@@ -80,7 +100,6 @@
                     const educationBtn = mainContent.querySelector('.education-btn');
                     const contactBtn = mainContent.querySelector('.contact-btn');
 
-                    // 아 반대로 했네.. 다음에는 Main 만들고 불러오자
                     if (homeBtn) {
                         homeBtn.addEventListener('click', () => {
                             const alertDiv = document.createElement('div');
@@ -89,7 +108,7 @@
                             alertDiv.style.top = '50%';
                             alertDiv.style.left = '50%';
                             alertDiv.style.transform = 'translate(-50%, -50%)';
-                            or = '#fff';
+                            alertDiv.style.color = '#fff';
                             alertDiv.style.backgroundColor = '#222';
                             alertDiv.style.padding = '20px';
                             alertDiv.style.borderRadius = '5px';
@@ -101,7 +120,6 @@
                             const countdown = setInterval(() => {
                                 alertDiv.textContent = `홈으로 이동합니다 ${count}...`;
                                 count--;
-
                                 if (count === 0) {
                                     setTimeout(() => {
                                         clearInterval(countdown);
@@ -112,48 +130,51 @@
                         });
                     }
 
-                    if (introductionBtn) {
+                    if (introductionBtn && homeContent) {
                         introductionBtn.addEventListener('click', () => {
                             homeContent.scrollIntoView({ behavior: 'smooth' });
-                        })
+                        });
                     }
 
-                    if (skillBtn) {
+                    if (skillBtn && skill) {
                         skillBtn.addEventListener('click', () => {
                             skill.scrollIntoView({ behavior: 'smooth' });
-                        })
+                        });
                     }
 
-                    if (projectBtn) {
+                    if (projectBtn && project) {
                         projectBtn.addEventListener('click', () => {
                             project.scrollIntoView({ behavior: 'smooth' });
-                        })
+                        });
                     }
 
-                    if (educationBtn) {
+                    if (educationBtn && education) {
                         educationBtn.addEventListener('click', () => {
                             education.scrollIntoView({ behavior: 'smooth' });
-                        })
+                        });
                     }
 
-                    if (contactBtn) {
+                    if (contactBtn && contact) {
                         contactBtn.addEventListener('click', () => {
                             contact.scrollIntoView({ behavior: 'smooth' });
-                        })
+                        });
                     }
                 });
         });
+
+        // 페이지 로드 시 크기 조절 함수 바로 실행
+        adjustContentScale();
     });
 
     function checkDevice() {
-        
-    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        var alertMessage = document.querySelector('.alert-message');
-        alertMessage.style.display = 'block';
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            var alertMessage = document.querySelector('.alert-message');
+            if (alertMessage) {
+                alertMessage.style.display = 'block';
+            }
+        }
     }
-}
-
-window.onload = checkDevice;
+    window.onload = checkDevice;
 </script>
 
 </html>
