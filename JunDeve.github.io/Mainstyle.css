@@ -369,24 +369,6 @@ nav {
     margin-bottom: 10px;
     height: 170px;
     width: 270px;
-}
-
-.box-E {
-    background-color: #222;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 10px;
-    height: 170px;
-    width: 270px;
-}
-
-.box-X {
-    background-color: #222;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 10px;
-    height: 170px;
-    width: 270px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -410,16 +392,6 @@ nav {
 
 .box-D:hover {
     background-color: #9fd1ffd2;
-    cursor: pointer;
-}
-
-.box-E:hover {
-    background-color: #ae9fffd2;
-    cursor: pointer;
-}
-
-.box-X:hover {
-    background-color: #e19fffd2;
     cursor: pointer;
 }
 
